@@ -1,6 +1,6 @@
 import axios from 'axios'
 import AxiosMock from 'axios-mock-adapter'
-import r from 'ramda'
+import * as r from 'ramda'
 import fixture from './todos/fixture'
 
 //why are these vars
