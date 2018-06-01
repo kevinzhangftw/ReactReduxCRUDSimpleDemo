@@ -58,4 +58,22 @@ render () {
       </div>
     )
   }
-```  
+```
+It is always a good idea to specify types of props, in this case JobsContainer proptypes is specced as follows:
+
+```
+JobsContainer.propTypes = {
+	dispatch: PropTypes.func,
+	jobs: PropTypes.arrayOf(PropTypes.object)
+}
+```
+
+Then we need to connect props to jobsContainer by defining our mapStateToProps
+
+```
+const mapStateToProps = (state, ownProps) => ({
+	jobs: getJobs(state)
+})
+```
+And then we `export default connect(mapStateToProps)(JobsContainer)`
+   
