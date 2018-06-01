@@ -15,11 +15,11 @@ class JobsContainer extends Component {
     const { jobs } = this.props
     console.log('jobs is', jobs)
     return (
-      <section className="container clearfix">
+      <div>
         {jobs.map(job =>
           <p key={job.id}>{job.name}</p>
         )}
-      </section>
+      </div>
     )
   }
 }

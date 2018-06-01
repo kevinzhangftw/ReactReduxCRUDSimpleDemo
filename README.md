@@ -44,4 +44,18 @@ componentDidMount() {
 		dispatch(fetchJobs())
 	}
 ```
+fetchJobs() makes the api call dispatch(fetchJobs()) happens in componentDidMount(), now that we have it in this.props, we want to load it into const{ jobs } 
 
+```
+render () {
+    const { jobs } = this.props
+    console.log('jobs is', jobs)
+    return (
+      <div>
+        {jobs.map(job =>
+          <p key={job.id}>{job.name}</p>
+        )}
+      </div>
+    )
+  }
+```  
