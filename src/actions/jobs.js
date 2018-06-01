@@ -1,3 +1,3 @@
-import { fetch } from '../vendor/fetch-redux-crud'
+import { fetch } from 'fetch-redux-crud'
 
 export const fetchJobs = () => fetch('jobs')

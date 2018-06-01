@@ -2705,9 +2705,9 @@ fbjs@^0.8.16:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.9"
 
-fetch-redux-crud@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/fetch-redux-crud/-/fetch-redux-crud-0.0.1.tgz#594c9078404cfa82e2db972460f017e84e2da335"
+fetch-redux-crud@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/fetch-redux-crud/-/fetch-redux-crud-0.0.2.tgz#8cb663b382332d6bf6021efcb2172c192512d44a"
   dependencies:
     "@types/redux" "^3.6.0"
     humps "^2.0.1"
