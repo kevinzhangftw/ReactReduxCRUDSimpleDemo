@@ -76,4 +76,44 @@ const mapStateToProps = (state, ownProps) => ({
 })
 ```
 And then we `export default connect(mapStateToProps)(JobsContainer)`
-   
+
+# Using fetch-redux-crud
+Now we need define our fetchJob() which is an action: `import { fetchJobs } from './actions/jobs'` Under our actions folder, we have a job.js which exports to fetchJobs(), because we are using fetch-redux-crud, we can do it like this in job.js
+
+```
+import { fetch } from 'fetch-redux-crud'
+
+export const fetchJobs = () => fetch('jobs')
+```   
+
+we also used getJobs() in JobsContainer which is a redux selector, we need to define this selector `import { getJobs } from './selector/jobs'
+
+```
+import values from 'lodash/values'
+
+export const getJobs = (state) => values(state.jobs.items)
+``` 
+
+lodash values just creates an array of job items.
+
+Now that we have defined our selectors, we need to define our reducers to createStore(), our reducer takes in reducers and our thunkMiddleWare, dont worry abot composewithDevTools for now, just concentrate on reducers.
+
+in our app.js , we defined reducers like this : `import reducers from './reducers'`, so now inside our reducers folder we have two files, index.js and jobs.js. index.js is where combine our reducers and job.js is where we defined our job reducer. we defined our index.js like this
+
+```
+import jobs from './jobs'
+import { combineReducers } from 'redux'
+
+export default combineReducers({
+  jobs
+})
+```
+
+In our jobs reducer, we can just fetch-redux-crud like this:
+
+```
+import { reducersFor } from 'fetch-redux-crud'
+
+export default reducersFor('jobs')
+
+```
