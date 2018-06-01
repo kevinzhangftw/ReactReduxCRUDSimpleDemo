@@ -8,9 +8,9 @@ yarn add fetch-redux-crud
 
 Set up the api URL like this
 
-`config.apiUrl = 'http://localhost:3001/api/v1'
+`config.apiUrl = 'http://localhost:3001/api/v1'`
 
-config.redirectUrl = '/login'`
+`config.redirectUrl = '/login'`
 
 Then setup your redux store and provider stuff
 
@@ -19,12 +19,11 @@ Then setup your redux store and provider stuff
 	composeWithDevTools(
 		redux.applyMiddleware(thunkMiddleware)
 	)
-)
+)`
 
-class App extends Component {
+`class App extends Component {
   render() {
 		console.log('they took our jobs...', this.props.jobs)
-
     return (
       <Provider store={store}>
 				<JobsTabContainer />
