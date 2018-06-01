@@ -3,34 +3,29 @@ import { Provider } from 'react-redux'
 import * as redux from "redux"
 import thunkMiddleware from 'redux-thunk'
 import bows from "bows"
+import { composeWithDevTools } from 'redux-devtools-extension'
 
-import initMocks from "./mocks"
-
-import todosReducer from './todos/reducer'
-import TodosIndex from './todos/Index'
+import reducers from './reducers'
+import JobsTabContainer from './JobsTabContainer'
 
 var log = bows("App")
 log("App")
-initMocks()
 
-const allReducers = redux.combineReducers({
-	todos: todosReducer,
-})
 
 const store = redux.createStore(
-	allReducers,
-	redux.compose(
+	reducers,
+	composeWithDevTools(
 		redux.applyMiddleware(thunkMiddleware)
 	)
 )
 
 class App extends Component {
   render() {
+		console.log('they took our jobs...', this.props.jobs)
+
     return (
       <Provider store={store}>
-				<section className="container clearfix">
-					<TodosIndex />
-				</section>
+				<JobsTabContainer />
 			</Provider>
     )
   }

@@ -5675,6 +5675,10 @@ react-fa@^5.0.0:
     font-awesome "^4.3.0"
     prop-types "^15.5.8"
 
+react-props@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/react-props/-/react-props-0.0.3.tgz#836fb887b155fbd7f7814d8eef12872b914b7c8f"
+
 react-redux@^5.0.7:
   version "5.0.7"
   resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-5.0.7.tgz#0dc1076d9afb4670f993ffaef44b8f8c1155a4c8"
@@ -5834,6 +5838,10 @@ redux-crud@^3.2.0:
     action-names "^0.3.2"
     invariant "^2.1.0"
     ramda "^0.23.0"
+
+redux-devtools-extension@^2.13.2:
+  version "2.13.2"
+  resolved "https://registry.yarnpkg.com/redux-devtools-extension/-/redux-devtools-extension-2.13.2.tgz#e0f9a8e8dfca7c17be92c7124958a3b94eb2911d"
 
 redux-thunk@^2.2.0, redux-thunk@^2.3.0:
   version "2.3.0"

@@ -9,10 +9,12 @@
     "cuid": "^2.1.1",
     "fetch-redux-crud": "^0.0.1",
     "invariant": "^2.2.4",
+    "lodash": "^4.17.10",
     "ramda": "^0.25.0",
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-fa": "^5.0.0",
+    "react-props": "^0.0.3",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0",
@@ -24,5 +26,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "redux-devtools-extension": "^2.13.2"
   }
 }
