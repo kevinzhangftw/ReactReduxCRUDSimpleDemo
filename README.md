@@ -9,6 +9,7 @@ yarn add fetch-redux-crud
 Set up the api URL like this
 
 `config.apiUrl = 'http://localhost:3001/api/v1'
+
 config.redirectUrl = '/login'`
 
 Then setup your redux store and provider stuff
@@ -30,6 +31,5 @@ class App extends Component {
 			</Provider>
     )
   }
-}
-`
+}`
 
