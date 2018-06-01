@@ -4,6 +4,7 @@ import * as redux from "redux"
 import thunkMiddleware from 'redux-thunk'
 import bows from "bows"
 import { composeWithDevTools } from 'redux-devtools-extension'
+import { config } from 'fetch-redux-crud'
 
 import reducers from './reducers'
 import JobsTabContainer from './JobsTabContainer'
@@ -11,6 +12,8 @@ import JobsTabContainer from './JobsTabContainer'
 var log = bows("App")
 log("App")
 
+config.apiUrl = 'http://localhost:3001/api/v1'
+config.redirectUrl = '/login'
 
 const store = redux.createStore(
 	reducers,
